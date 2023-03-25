@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Please Register</title>
+<link th:href="@{/assets/add/css/bootstrap.min.css}" rel="stylesheet">
+<!--<link th:href="@{/mdBoot/css/mdb.min.css}" rel="stylesheet">-->
+<!--<link th:href="@{/mdBoot/css/mdb.dark.min.css}" rel="stylesheet">-->
+<!--<link th:href="@{/font/css/all.css}" rel="stylesheet">-->
+<style>INPUT:-webkit-autofill,SELECT:-webkit-autofill,TEXTAREA:-webkit-autofill{animation-name:onautofillstart}INPUT:not(:-webkit-autofill),SELECT:not(:-webkit-autofill),TEXTAREA:not(:-webkit-autofill){animation-name:onautofillcancel}@keyframes onautofillstart{from{}}@keyframes onautofillcancel{from{}}
+</style>
+<!--<script src="@{/mdBoot/js/mdb.min.js}"></script>-->
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+<body class="vsc-initialized">
+<div style="height:100px;"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="logoClass">
+                <div class="card justify-content-center p-5">
+                    <form class="form-signin" th:action="@{/user/registration}" th:object="${newUser}" method="post" enctype="multipart/form-data">
+                        <h2 class="form-signin-heading">Please Register</h2>
+                        <input type="hidden" th:field="*{id}" id="id" name="id" class="form-control">
+                        <p>
+                            <label for="username" class="sr-only">First Name</label>
+                            <input type="text" th:field="*{firstName}" id="firstname" name="firstname" class="form-control" placeholder="firstname" required="" autofocus="">
+                        </p>
+                        <p>
+                            <label for="username" class="sr-only">Last Name</label>
+                            <input type="text" th:field="*{lastName}" id="lastname" name="lastname" class="form-control" placeholder="lastname" required="" autofocus="">
+                        </p>
+                        <p>
+                            <label for="username" class="sr-only">Username</label>
+                            <input type="text" th:field="*{username}" id="username" name="username" class="form-control" placeholder="Username" required="" autofocus="">
+                        </p>
+                        <p>
+                            <label for="password" class="sr-only">Password</label>
+                            <input type="password" th:field="*{password}" id="password" name="password" class="form-control" placeholder="Password" required="">
+                        </p>
+                        <p>
+                            <label for="confirmPassword" class="sr-only">Confirm Password</label>
+                            <input type="password"  id="confirmPassword" class="form-control" placeholder="Confirm Password" required="">
+                        </p>
+                        <input name="_csrf" type="hidden" value="432dc310-1e91-4e42-9daa-299be0fa367b">
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
+<!--<input type="file"  class="custom-file-input" name="productImage" accept="image/jpeg, image/png"  id="productImage"/>-->
+<script th:src="@{/assets/add/js/app.js}"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script th:src="@{/assets/add/js/bootstrap.min.js}"></script>
+</body>
+</html>

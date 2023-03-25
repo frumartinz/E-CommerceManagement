@@ -1,0 +1,222 @@
+
+.myown{
+    background-color: #fff;
+    border-radius: 4px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    overflow: hidden;
+    width: 400px;
+    max-width: 100%;
+}
+
+.my-head{
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 20px 40px;
+}
+
+.my-heder{
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 20px 40px;
+}
+
+.my-head h2{
+    margin: 0;
+}
+
+.dot{
+    padding: 10px 20px;
+}
+
+.myd{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.myd label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.myd input{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 14px;
+    font-family: inherit;
+    padding: 10px;
+    width: 100%;
+}
+
+.mydd input{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 14px;
+    font-family: inherit;
+    padding: 10px;
+    width: 100%;
+}
+
+.myd.success input{
+    border-color: #2ecc71;
+}
+
+.myd.error input{
+    border-color: #e74c3c;
+}
+
+.myd i{
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.myd.myd.success i.fa-check-circle{
+    visibility: visible;
+    color: #2ecc71;
+}
+
+.myd.myd.error i.fa-exclamation-circle{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+.myd small{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.myd.error small{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+
+.butt{
+     background-color: #3399cc;
+    color: #fff;
+    border: 2px solid #3399cc;
+    display: block;
+    font-size: 16px;
+    font-family: inherit;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.my-button{
+    margin-top: 30px;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #3399cc;
+    display: block;
+    font-size: 16px;
+    font-family: inherit;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+#own-color{
+    background-color: #3399cc;
+    color: #fff;
+    border: 2px solid #3399cc;
+    font-family: inherit;
+}
+
+#pdf{
+    margin-top: 10px;
+}
+
+#pdf a{
+    text-decoration: none;
+    color: rgb(220, 29, 29);
+}
+
+#fdp a{
+    text-decoration: none;
+}
+
+/*-------pop up validation----*/
+.myow{
+    height: 50vh;
+}
+
+.mydd.success input{
+    border-color: #2ecc71;
+}
+
+.mydd.error input{
+    border-color: #e74c3c;
+}
+
+.mydd i{
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.myd.myd.success i.fa-check-circle{
+    visibility: visible;
+    color: #2ecc71;
+}
+
+.mydd.mydd.error i.fa-exclamation-circle{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+.mydd small{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.mydd.error small{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+
+#cos-nav{
+    border-bottom: 1px solid #3399cc;
+}
+
+.shift-down{
+    margin-top: 20px;
+}
+
+/* .fa{
+    color: #3399cc;
+} */
+
+.column-1{
+    text-align: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    margin: 5px;
+    border-radius: 8px;
+    height: 50vh;
+}
+
+.column-1{
+	box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+
+.services{
+    text-align: center;
+    background-color: #333;
+    color: #3399cc;
+    padding: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

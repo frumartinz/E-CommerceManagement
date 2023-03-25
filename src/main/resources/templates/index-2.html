@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Please sign in</title>
+<link th:href="@{/assets/add/css/bootstrap.min.css}" rel="stylesheet">
+<!--<link th:href="@{/mdBoot/css/mdb.min.css}" rel="stylesheet">-->
+<!--<link th:href="@{/mdBoot/css/mdb.dark.min.css}" rel="stylesheet">-->
+<!--<link th:href="@{/font/css/all.css}" rel="stylesheet">-->
+<style>INPUT:-webkit-autofill,SELECT:-webkit-autofill,TEXTAREA:-webkit-autofill{animation-name:onautofillstart}INPUT:not(:-webkit-autofill),SELECT:not(:-webkit-autofill),TEXTAREA:not(:-webkit-autofill){animation-name:onautofillcancel}@keyframes onautofillstart{from{}}@keyframes onautofillcancel{from{}}
+</style>
+<!--<script src="@{/mdBoot/js/mdb.min.js}"></script>-->
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+<body class="vsc-initialized">
+<div style="height:100px;"></div>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-md-6">
+            <div class="card justify-content-center p-5">
+                <form class="form-signin" method="post" th:action="@{/login}">
+                    <h2 class="form-signin-heading">Please sign in</h2>
+                    <p>
+                        <label for="username" class="sr-only">Username</label>
+                        <input type="text" id="username" name="username" class="form-control" placeholder="Username" required="" autofocus="">
+                    </p>
+                    <p>
+                        <label for="password" class="sr-only">Password</label>
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+                    </p>
+                    <input name="_csrf" type="hidden" value="432dc310-1e91-4e42-9daa-299be0fa367b">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                    <div class="row">
+                        <div class="col">Do you have an account? <a th:href="@{/user/register}">Register</a></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+
+</div>
+
+<script th:src="@{/assets/add/js/app.js}"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script th:src="@{/assets/add/js/bootstrap.min.js}"></script>
+
+<!--<script th:src="@{/bootstrap/js/bootstrap.js}"></script>-->
+</body>
+</html>
