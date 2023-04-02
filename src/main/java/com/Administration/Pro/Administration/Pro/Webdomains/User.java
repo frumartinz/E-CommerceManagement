@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "user_name")
@@ -22,6 +23,14 @@ public class User {
     private String password;
 
     private String imageName;
+
+    @ManyToMany(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "user_role",
+            joinColumns = {@JoinColumn(name = "USER_ID", referencedColumnName = "ID")},
+            inverseJoinColumns = {@JoinColumn (name = "ROLE_ID",referencedColumnName = "ID")}
+    )
+    private List<Role> roles;
 
     public User() {
     }
@@ -81,5 +90,13 @@ public class User {
 
     public void setImageName(String imageName) {
         this.imageName = imageName;
+    }
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
     }
 }

@@ -37,6 +37,17 @@
                             <label for="username" class="sr-only">Username</label>
                             <input type="text" th:field="*{username}" id="username" name="username" class="form-control" placeholder="Username" required="" autofocus="">
                         </p>
+
+                        <p>
+                            <label for="username" class="sr-only">Role</label>
+                            <select class="form-control" th:field="*{roles}">
+                                <th:block th:each="role:${roles}">
+                                    <option th:text="${role.name}" th:value="${role.id}">None</option>
+                                </th:block>
+                            </select>
+
+                        </p>
+
                         <p>
                             <label for="password" class="sr-only">Password</label>
                             <input type="password" th:field="*{password}" id="password" name="password" class="form-control" placeholder="Password" required="">
