@@ -3,19 +3,20 @@ package com.Administration.Pro.Administration.Pro.Webdomains;
 import lombok.Data;
 
 import java.sql.Date;
+import java.time.format.DateTimeFormatter;
 
 @Data
 public class EmployeeDTO {
-    private Long id;
+    private long id;
     private String surname;
     private String givenName;
     private String email;
     private String address;
     private String yoe;
     private String pob;
-    private Date dob;
+    private String dob;
     private String hq;
-    private Long number;
+    private long number;
     private String nationality;
     private String department;
     private String sex;

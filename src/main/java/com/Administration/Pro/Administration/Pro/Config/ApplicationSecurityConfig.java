@@ -3,6 +3,7 @@ package com.Administration.Pro.Administration.Pro.Config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.domain.AuditorAware;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -10,6 +11,8 @@ import org.springframework.security.config.annotation.authentication.configurers
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
@@ -51,5 +54,17 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
         provider.setUserDetailsService(userDetailsService);
         provider.setPasswordEncoder(bCryptPasswordEncoder());
         return provider;
+    }
+//    @Override
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        auth.userDetailsService(userDetailsService);
+//    }
+
+    @Bean
+    public AuditorAware<String> auditorAware() {
+        return () -> {
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            return java.util.Optional.ofNullable(authentication != null ? authentication.getName() : "UNKNOWN");
+        };
     }
 }
